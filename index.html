@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="theme-color" content="#10131c">
+  <title>HEART//THIEF — A Pixel Action Adventure</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Heart Thief home"><span class="brand-mark">♥</span><span>HEART<span class="slash">//</span>THIEF</span></a>
+      <div class="top-note"><span class="live-dot"></span> AN INDIE PIXEL ADVENTURE</div>
+      <button id="soundBtn" class="sound-btn" aria-label="Toggle sound">♫ <span>SOUND ON</span></button>
+    </header>
+    <section class="game-frame" aria-label="Game area">
+      <div class="screen-wrap">
+        <canvas id="game" width="480" height="270" aria-label="Heart Thief platform game"></canvas>
+        <div class="scanlines"></div>
+        <div id="overlay" class="overlay">
+          <div class="intro-card">
+            <div class="eyebrow"><span class="eyebrow-line"></span> A HEARTSICK CITY, 199X <span class="eyebrow-line"></span></div>
+            <h1>HEART<span>//</span><br>THIEF</h1>
+            <p class="story">The Black Veil took your three hearts.<br>Only the human one remains.</p>
+            <div class="heart-row"><span class="heart human">♥</span><span class="heart lost">♥</span><span class="heart lost">♥</span><i>ONE HEART LEFT</i></div>
+            <button id="startBtn" class="start-btn">BEGIN THE HUNT <span>▶</span></button>
+            <div class="mini-controls">MOVE <kbd>A</kbd><kbd>D</kbd> &nbsp; JUMP <kbd>SPACE</kbd> &nbsp; STRIKE <kbd>J</kbd></div>
+          </div>
+        </div>
+      </div>
+      <div class="bottom-bar">
+        <div class="location"><span class="location-icon">⌖</span><div><b id="stageName">NIGHT MARKET</b><small id="stageSub">DISTRICT 01 — THE OUTSKIRTS</small></div></div>
+        <div class="progress"><span id="progressText">01</span><div class="progress-track"><i id="progressFill"></i></div><span>03</span></div>
+        <div class="controls-hint"><span>J</span> STRIKE <span>SPACE</span> JUMP <span>K</span> POWER</div>
+      </div>
+    </section>
+    <footer><span>© 199X BLACK VEIL CITY</span><span>PIXEL ART · BUILT FOR EVERY DEVICE</span><span>NO HEART LEFT BEHIND <b>♥</b></span></footer>
+  </main>
+  <div class="mobile-controls" aria-label="Touch controls">
+    <div class="mobile-group"><button data-key="left" aria-label="Move left">◀</button><button data-key="right" aria-label="Move right">▶</button></div>
+    <div class="mobile-group actions"><button data-key="attack" aria-label="Attack">✦</button><button data-key="jump" aria-label="Jump">↑</button><button data-key="power" aria-label="Power">⚡</button></div>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>
